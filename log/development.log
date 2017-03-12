@@ -1,0 +1,795 @@
+
+
+Started GET "/" for ::1 at 2017-02-18 00:31:11 -0800
+
+Mysql2::Error (Access denied for user 'root'@'localhost' (using password: NO)):
+  mysql2 (0.3.21) lib/mysql2/client.rb:70:in `connect'
+  mysql2 (0.3.21) lib/mysql2/client.rb:70:in `initialize'
+  activerecord (4.2.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
+  activerecord (4.2.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:436:in `new_connection'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:446:in `checkout_new_connection'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /Users/rohankarthik/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/monitor.rb:214:in `mon_synchronize'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /Users/rohankarthik/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/monitor.rb:214:in `mon_synchronize'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:565:in `retrieve_connection'
+  activerecord (4.2.0) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.0) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.0) lib/active_record/migration.rb:384:in `connection'
+  activerecord (4.2.0) lib/active_record/migration.rb:371:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/rohankarthik/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/rohankarthik/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/rohankarthik/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (119.7ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (128.5ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.2ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (319.2ms)
+
+
+Started GET "/" for ::1 at 2017-02-18 00:31:42 -0800
+
+Mysql2::Error (Access denied for user 'root'@'localhost' (using password: NO)):
+  mysql2 (0.3.21) lib/mysql2/client.rb:70:in `connect'
+  mysql2 (0.3.21) lib/mysql2/client.rb:70:in `initialize'
+  activerecord (4.2.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
+  activerecord (4.2.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:436:in `new_connection'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:446:in `checkout_new_connection'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /Users/rohankarthik/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/monitor.rb:214:in `mon_synchronize'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /Users/rohankarthik/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/monitor.rb:214:in `mon_synchronize'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:565:in `retrieve_connection'
+  activerecord (4.2.0) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.0) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.0) lib/active_record/migration.rb:384:in `connection'
+  activerecord (4.2.0) lib/active_record/migration.rb:371:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/rohankarthik/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/rohankarthik/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/rohankarthik/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (85.2ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (75.2ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (174.5ms)
+
+
+Started GET "/" for ::1 at 2017-02-18 00:32:09 -0800
+
+TypeError (wrong argument type Class (expected Module)):
+  app/controllers/sentences_controller.rb:2:in `include'
+  app/controllers/sentences_controller.rb:2:in `<class:SentencesController>'
+  app/controllers/sentences_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (16.3ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (105.2ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (87.0ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (178.8ms)
+
+
+Started GET "/" for ::1 at 2017-02-18 00:32:40 -0800
+
+ActionController::RoutingError (undefined method `respond_to' for SentencesController:Class
+Did you mean?  respond_to?):
+  app/controllers/sentences_controller.rb:3:in `<class:SentencesController>'
+  app/controllers/sentences_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (24.8ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (139.2ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (97.0ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (237.6ms)
+
+
+Started GET "/" for ::1 at 2017-02-18 00:33:53 -0800
+
+ActionController::RoutingError (undefined method `respond_to' for SentencesController:Class
+Did you mean?  respond_to?):
+  app/controllers/sentences_controller.rb:3:in `<class:SentencesController>'
+  app/controllers/sentences_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.9ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (98.4ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (92.4ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (201.3ms)
+
+
+Started GET "/" for ::1 at 2017-02-18 00:36:42 -0800
+
+ActionController::RoutingError (undefined method `respond_to' for SentencesController:Class
+Did you mean?  respond_to?):
+  app/controllers/sentences_controller.rb:3:in `<class:SentencesController>'
+  app/controllers/sentences_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.6ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (22.5ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (17.8ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (152.4ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (98.1ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (184.4ms)
+
+
+Started GET "/" for ::1 at 2017-02-18 00:37:13 -0800
+
+ActionController::RoutingError (The controller-level `respond_to' feature has been extracted to the `responders` gem. Add it to your Gemfile to continue using this feature:
+  gem 'responders', '~> 2.0'
+Consult the Rails upgrade guide for details.):
+  app/controllers/sentences_controller.rb:3:in `<class:SentencesController>'
+  app/controllers/sentences_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.5ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.0ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (139.7ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (90.3ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (209.9ms)
+
+
+Started GET "/" for ::1 at 2017-02-18 00:38:12 -0800
+
+ActionController::RoutingError (The controller-level `respond_to' feature has been extracted to the `responders` gem. Add it to your Gemfile to continue using this feature:
+  gem 'responders', '~> 2.0'
+Consult the Rails upgrade guide for details.):
+  app/controllers/sentences_controller.rb:3:in `<class:SentencesController>'
+  app/controllers/sentences_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.3ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (135.2ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (74.4ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (171.4ms)
+
+
+Started GET "/" for ::1 at 2017-02-18 00:38:59 -0800
+
+ActionController::RoutingError (The controller-level `respond_to' feature has been extracted to the `responders` gem. Add it to your Gemfile to continue using this feature:
+  gem 'responders', '~> 2.0'
+Consult the Rails upgrade guide for details.):
+  app/controllers/sentences_controller.rb:3:in `<class:SentencesController>'
+  app/controllers/sentences_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.5ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (114.2ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.2ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (86.4ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /Users/rohankarthik/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (219.2ms)
+
+
+Started GET "/" for ::1 at 2017-02-18 00:39:22 -0800
+Processing by SentencesController#index as HTML
+  Rendered sentences/index.html within layouts/application (4.1ms)
+Completed 200 OK in 607ms (Views: 584.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-02-18 00:39:23 -0800
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2017-02-18 00:39:23 -0800
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-02-18 00:39:23 -0800
+
+
+Started GET "/assets/application.self-4c9a00e173429d99e09393c4a4f674712d9ddb63d2a0b37ccb70e07bbd46c6c9.js?body=1" for ::1 at 2017-02-18 00:39:23 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2017-02-18 00:39:23 -0800
+
+
+Started POST "/sentences" for ::1 at 2017-02-18 00:39:50 -0800
+Processing by SentencesController#correction as JSON
+  Parameters: {"input_text"=>"I am good.I am bad.I do not know?I am good.bad.ok.alright."}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-18 01:00:06 -0800
+Processing by SentencesController#index as HTML
+  Rendered sentences/index.html within layouts/application (3.6ms)
+Completed 200 OK in 144ms (Views: 142.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2017-02-18 01:00:06 -0800
+
+
+Started GET "/assets/application.self-9330020d6962c8434746063bc4dba7bc5ef1ed372bb44fd29112d0da9c77813d.js?body=1" for ::1 at 2017-02-18 01:00:06 -0800
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2017-02-18 01:00:06 -0800
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-02-18 01:00:06 -0800
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-02-18 01:00:06 -0800
+
+
+Started GET "/" for ::1 at 2017-02-18 01:00:31 -0800
+Processing by SentencesController#index as HTML
+  Rendered sentences/index.html within layouts/application (0.1ms)
+Completed 200 OK in 128ms (Views: 127.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2017-02-18 01:00:31 -0800
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-02-18 01:00:31 -0800
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2017-02-18 01:00:31 -0800
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-02-18 01:00:31 -0800
+
+
+Started GET "/assets/application.self-c1cfcc6c46c82bb4c3e3d17ffd61763fb1a689f0b5fefc64e3c772525b7062ee.js?body=1" for ::1 at 2017-02-18 01:00:31 -0800
+
+
+Started GET "/" for ::1 at 2017-02-18 01:01:51 -0800
+Processing by SentencesController#index as HTML
+  Rendered sentences/index.html within layouts/application (1.1ms)
+Completed 200 OK in 130ms (Views: 125.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2017-02-18 01:01:52 -0800
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-02-18 01:01:52 -0800
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2017-02-18 01:01:52 -0800
+
+
+Started GET "/assets/application.self-318c24e145b5601ef381b74fb5de3500ef25995435e52395eb198ef2c1413299.js?body=1" for ::1 at 2017-02-18 01:01:52 -0800
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-02-18 01:01:52 -0800
+
+
+Started GET "/" for ::1 at 2017-02-18 01:02:07 -0800
+Processing by SentencesController#index as HTML
+  Rendered sentences/index.html within layouts/application (0.1ms)
+Completed 200 OK in 129ms (Views: 127.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-02-18 01:02:07 -0800
+
+
+Started GET "/assets/application.self-36037d3bb7e2055c30432e3937de2512965e2b3ed546005979fecdd506b6584d.js?body=1" for ::1 at 2017-02-18 01:02:07 -0800
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2017-02-18 01:02:07 -0800
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-02-18 01:02:07 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2017-02-18 01:02:07 -0800
+
+
+Started GET "/" for ::1 at 2017-02-18 01:02:17 -0800
+Processing by SentencesController#index as HTML
+  Rendered sentences/index.html within layouts/application (1.0ms)
+Completed 200 OK in 151ms (Views: 144.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-02-18 01:02:17 -0800
+
+
+Started GET "/assets/application.self-4e7c52a1a6b527342e3487ea168ebf0f42eb96f49d1179b9b1d20151ec96d227.js?body=1" for ::1 at 2017-02-18 01:02:17 -0800
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2017-02-18 01:02:17 -0800
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-02-18 01:02:18 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2017-02-18 01:02:18 -0800
+
+
+Started POST "/sentences" for ::1 at 2017-02-18 01:02:23 -0800
+Processing by SentencesController#correction as JSON
+  Parameters: {"input_text"=>"ss"}
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sentences" for ::1 at 2017-02-18 01:02:27 -0800
+Processing by SentencesController#correction as JSON
+  Parameters: {"input_text"=>"ss"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sentences" for ::1 at 2017-02-18 01:02:30 -0800
+Processing by SentencesController#correction as JSON
+  Parameters: {"input_text"=>"ssff.dfdf"}
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sentences" for ::1 at 2017-02-18 01:02:30 -0800
+Processing by SentencesController#correction as JSON
+  Parameters: {"input_text"=>"ssff.dfdf"}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-18 01:03:03 -0800
+Processing by SentencesController#index as HTML
+  Rendered sentences/index.html within layouts/application (0.2ms)
+Completed 200 OK in 212ms (Views: 209.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2017-02-18 01:03:03 -0800
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-02-18 01:03:03 -0800
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-02-18 01:03:03 -0800
+
+
+Started GET "/assets/application.self-4f3f0c9048819c5761febdf1bf6b25eabd16ed444b54504a3d04272a23400af5.js?body=1" for ::1 at 2017-02-18 01:03:03 -0800
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2017-02-18 01:03:03 -0800
+
+
+Started POST "/sentences" for ::1 at 2017-02-18 01:03:13 -0800
+Processing by SentencesController#correction as JSON
+  Parameters: {"input_text"=>"sss.dsdssds.dsdsd.I am good."}
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-18 01:10:42 -0800
+Processing by SentencesController#index as HTML
+  Rendered sentences/index.html within layouts/application (0.9ms)
+Completed 200 OK in 182ms (Views: 175.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-02-18 01:10:43 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2017-02-18 01:10:43 -0800
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-02-18 01:10:43 -0800
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2017-02-18 01:10:43 -0800
+
+
+Started GET "/assets/application.self-fc8d43de0b7cf5d12dcc85dd242bb31cde83c0838ee1a51a1756169b951d6003.js?body=1" for ::1 at 2017-02-18 01:10:43 -0800
+
+
+Started GET "/" for ::1 at 2017-02-18 01:11:16 -0800
+Processing by SentencesController#index as HTML
+  Rendered sentences/index.html within layouts/application (0.1ms)
+Completed 200 OK in 216ms (Views: 215.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2017-02-18 01:11:17 -0800
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-02-18 01:11:17 -0800
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-02-18 01:11:17 -0800
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2017-02-18 01:11:17 -0800
+
+
+Started GET "/assets/application.self-53821b5f30aebf0a683b0e5bd2bc5d541dd39ae40d4f3179f1b79c7701cff6ed.js?body=1" for ::1 at 2017-02-18 01:11:17 -0800
+
+
+Started POST "/sentences" for ::1 at 2017-02-18 01:11:28 -0800
+Processing by SentencesController#correction as JSON
+  Parameters: {"input_text"=>"ss.ss.s.ewew.aa"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-18 01:12:11 -0800
+Processing by SentencesController#index as HTML
+  Rendered sentences/index.html within layouts/application (1.1ms)
+Completed 200 OK in 251ms (Views: 246.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2017-02-18 01:12:12 -0800
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-02-18 01:12:12 -0800
+
+
+Started GET "/assets/application.self-9bb9325549cb5c6c2b56ce243e6647db203ec94b78a67245ae79a232529dec91.js?body=1" for ::1 at 2017-02-18 01:12:12 -0800
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-02-18 01:12:12 -0800
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2017-02-18 01:12:12 -0800
+
+
+Started POST "/sentences" for ::1 at 2017-02-18 01:12:18 -0800
+Processing by SentencesController#correction as JSON
+  Parameters: {"input_text"=>"sss."}
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-18 01:16:52 -0800
+Processing by SentencesController#index as HTML
+  Rendered sentences/index.html within layouts/application (1.0ms)
+Completed 200 OK in 161ms (Views: 159.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-02-18 01:16:53 -0800
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-02-18 01:16:53 -0800
+
+
+Started GET "/assets/application.self-0415b131185c08fbabfc73b86d1909d8371d94947a688050dd60f0598221ee6a.js?body=1" for ::1 at 2017-02-18 01:16:53 -0800
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2017-02-18 01:16:53 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2017-02-18 01:16:53 -0800
+
+
+Started POST "/sentences" for ::1 at 2017-02-18 01:17:06 -0800
+Processing by SentencesController#correction as JSON
+  Parameters: {"input_text"=>"I am good.I am bad.hello.polo"}
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sentences" for ::1 at 2017-02-18 01:17:23 -0800
+Processing by SentencesController#correction as JSON
+  Parameters: {"input_text"=>"I am good.I am bad.hello.polo. helllo.ff.a.a."}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-18 01:19:16 -0800
+Processing by SentencesController#index as HTML
+  Rendered sentences/index.html within layouts/application (4.3ms)
+Completed 200 OK in 592ms (Views: 573.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-02-18 01:19:17 -0800
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-02-18 01:19:17 -0800
+
+
+Started GET "/assets/application.self-1aa196a95112455196c440ed818c714d88d593557975cfb3b43ed88d040b8373.js?body=1" for ::1 at 2017-02-18 01:19:17 -0800
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2017-02-18 01:19:17 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2017-02-18 01:19:17 -0800
+
+
+Started POST "/sentences" for ::1 at 2017-02-18 01:19:27 -0800
+Processing by SentencesController#correction as JSON
+  Parameters: {"input_text"=>"I am good.bad.hello.polo"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sentences" for ::1 at 2017-02-18 01:19:34 -0800
+Processing by SentencesController#correction as JSON
+  Parameters: {"input_text"=>"I am good.bad.hello.polo.o.oeww.asa"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-18 01:21:28 -0800
+Processing by SentencesController#index as HTML
+  Rendered sentences/index.html within layouts/application (0.8ms)
+Completed 200 OK in 205ms (Views: 197.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2017-02-18 01:21:28 -0800
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-02-18 01:21:28 -0800
+
+
+Started GET "/assets/application.self-14a1e712d412d92fd5bbc51e2a295e69ea29c96ace9791616713a3ab3534532f.js?body=1" for ::1 at 2017-02-18 01:21:28 -0800
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2017-02-18 01:21:29 -0800
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-02-18 01:21:29 -0800
+
+
+Started POST "/sentences" for ::1 at 2017-02-18 01:21:38 -0800
+Processing by SentencesController#correction as JSON
+  Parameters: {"input_text"=>"sasa.sasa.sa.sa.sas"}
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sentences" for ::1 at 2017-02-18 01:21:42 -0800
+Processing by SentencesController#correction as JSON
+  Parameters: {"input_text"=>"sasa.sasa.sa.sa.sa.sa.sa.sas"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sentences" for ::1 at 2017-02-18 01:22:06 -0800
+Processing by SentencesController#correction as JSON
+  Parameters: {"input_text"=>"sasa.s.asa.sa.sa"}
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-18 01:23:21 -0800
+Processing by SentencesController#index as HTML
+  Rendered sentences/index.html within layouts/application (0.4ms)
+Completed 200 OK in 203ms (Views: 201.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2017-02-18 01:23:22 -0800
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-02-18 01:23:22 -0800
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-02-18 01:23:22 -0800
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2017-02-18 01:23:22 -0800
+
+
+Started GET "/assets/application.self-e8b82dcab550e0616ae96b6fd1cda1e04eb88f6a7ff743ac9c1bd3e237627738.js?body=1" for ::1 at 2017-02-18 01:23:22 -0800
+
+
+Started GET "/" for ::1 at 2017-02-18 01:25:49 -0800
+Processing by SentencesController#index as HTML
+  Rendered sentences/index.html within layouts/application (0.5ms)
+Completed 200 OK in 171ms (Views: 165.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2017-02-18 01:25:49 -0800
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-02-18 01:25:49 -0800
+
+
+Started GET "/assets/application.self-da4f3fc69a05c40c5276205c2cc1938143702639cd6489a7c3d2edffae5f0f1a.js?body=1" for ::1 at 2017-02-18 01:25:49 -0800
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-02-18 01:25:49 -0800
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2017-02-18 01:25:49 -0800
+
+
+Started GET "/" for ::1 at 2017-02-18 01:26:11 -0800
+Processing by SentencesController#index as HTML
+  Rendered sentences/index.html within layouts/application (0.1ms)
+Completed 200 OK in 119ms (Views: 118.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2017-02-18 01:26:11 -0800
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-02-18 01:26:11 -0800
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-02-18 01:26:11 -0800
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2017-02-18 01:26:11 -0800
+
+
+Started GET "/assets/application.self-1aabdedf09194791bd631df6ef3bd4b5a8cadab654e3357837ebe4229eca8ffb.js?body=1" for ::1 at 2017-02-18 01:26:11 -0800
+
+
+Started POST "/sentences" for ::1 at 2017-02-18 01:26:18 -0800
+Processing by SentencesController#correction as JSON
+  Parameters: {"input_text"=>"sasas.as.as.a.sa.saa"}
+Completed 200 OK in 7ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-18 01:28:55 -0800
+Processing by SentencesController#index as HTML
+  Rendered sentences/index.html within layouts/application (4.0ms)
+Completed 200 OK in 537ms (Views: 523.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2017-02-18 01:28:56 -0800
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-02-18 01:28:56 -0800
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2017-02-18 01:28:57 -0800
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-02-18 01:28:57 -0800
+
+
+Started GET "/assets/application.self-69fbf4172b8aaefed1aaba15b8176a9ae7edbc9dbd6ff30d7d1192ed57d359b9.js?body=1" for ::1 at 2017-02-18 01:28:57 -0800
+
+
+Started POST "/sentences" for ::1 at 2017-02-18 01:29:02 -0800
+Processing by SentencesController#correction as JSON
+  Parameters: {"input_text"=>"sasa.sa.sa.s.as.aa"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sentences" for ::1 at 2017-02-18 01:29:11 -0800
+Processing by SentencesController#correction as JSON
+  Parameters: {"input_text"=>"sas.a.sa.saasa"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sentences" for ::1 at 2017-02-18 01:30:01 -0800
+Processing by SentencesController#correction as JSON
+  Parameters: {"input_text"=>"sa.sa.sa.sa.saa"}
+Completed 200 OK in 19ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-18 01:31:45 -0800
+Processing by SentencesController#index as HTML
+  Rendered sentences/index.html within layouts/application (3.6ms)
+Completed 200 OK in 122ms (Views: 116.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2017-02-18 01:31:45 -0800
+
+
+Started GET "/assets/application.self-69fbf4172b8aaefed1aaba15b8176a9ae7edbc9dbd6ff30d7d1192ed57d359b9.js?body=1" for ::1 at 2017-02-18 01:31:45 -0800
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2017-02-18 01:31:46 -0800
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-02-18 01:31:46 -0800
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-02-18 01:31:46 -0800
